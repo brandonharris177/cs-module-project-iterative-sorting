@@ -23,14 +23,39 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
+    i = 0
+    while i in range(0, len(arr) - 1):
+        # print(arr[i], arr[i+1])
+        if arr[i] > arr[i+1]:
+            # print("if statement fired")
+            cur_index = i
+            while arr[cur_index] > arr[cur_index+1]:
+                # print("while loop ran")
+                arr[cur_index], arr[cur_index+1] = arr[cur_index+1], arr[cur_index]
+                # print(arr)
+                i = 0
+        else:
+            i = i+1
+    # print(arr)      
+    return arr
+
+
+# bubble_sort([3, 2, 1, 9, 7, 4, 5])
+
+# Spare bubble sort code 
     # Your code here
     # for i in range(0, len(arr) - 1):
     #     cur_index = i
-    #     if arr[i] > arr[i+1]
-
-
-    # return arr
-    pass
+    #     while arr[cur_index] > arr[cur_index+1]:
+    #         arr[cur_index], arr[cur_index+1] = arr[cur_index+1], arr[cur_index]
+    # print(arr)
+        # recheck = 0
+    # while arr[recheck] < arr[recheck+1]:
+    #     recheck = recheck+1
+    #     cur_index = 0
+    #     while arr[cur_index] > arr[cur_index+1]:
+    #         arr[cur_index], arr[cur_index+1] = arr[cur_index+1], arr[cur_index]
+    # print(arr)
 
 '''
 STRETCH: implement the Count Sort function below
